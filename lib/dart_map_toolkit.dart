@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library dart_map_toolkit;
 
-export 'src/dart_map_toolkit_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/core/string_analyzer.dart';
+export 'src/core/regex_extension/regex_part.dart';
+export 'src/core/regex_extension/regex_prebuilt.dart';
