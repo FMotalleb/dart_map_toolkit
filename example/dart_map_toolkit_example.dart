@@ -1,5 +1,5 @@
-import 'package:dart_map_toolkit/src/core/regex_extension/regex_part.dart';
-import 'package:dart_map_toolkit/src/core/string_analyzer.dart';
+import 'package:string_formatter_kit/src/core/regex_extension/regex_part.dart';
+import 'package:string_formatter_kit/src/core/string_analyzer.dart';
 
 void main() {
   // final analyzer = StringAnalyzer();

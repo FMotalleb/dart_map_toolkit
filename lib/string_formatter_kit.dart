@@ -1,7 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library dart_map_toolkit;
+library string_formatter_kit;
 
 export 'src/core/string_analyzer.dart';
 export 'src/core/regex_extension/regex_part.dart';

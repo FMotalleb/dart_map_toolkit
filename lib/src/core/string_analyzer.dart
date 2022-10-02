@@ -1,4 +1,4 @@
-import 'package:dart_map_toolkit/src/core/regex_extension/regex_part.dart';
+import 'package:string_formatter_kit/src/core/regex_extension/regex_part.dart';
 
 class StringAnalyzer {
   final RegExRoot tokenRoot;
