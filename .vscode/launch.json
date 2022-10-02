@@ -5,8 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "program": "example/dart_map_toolkit_example.dart",
-            "name": "dart_map_toolkit",
+            "program": "example/string_formatter_kit_example.dart",
+            "name": "string_formatter_kit",
             "request": "launch",
             "type": "dart"
         }
