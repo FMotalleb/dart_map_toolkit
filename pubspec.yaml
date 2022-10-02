@@ -1,7 +1,8 @@
-name: dart_map_toolkit
+name: string_formatter_kit
 description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# homepage: https://www.example.com
+version: 0.0.1+dev0
+homepage: https://moti.monster
+repository: https://github.com/FMotalleb/string_formatter_kit
 
 environment:
   sdk: ">=2.18.1 <3.0.0"
