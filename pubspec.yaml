@@ -1,6 +1,6 @@
 name: string_formatter_kit
 description: This package contains tools to reading strings into maps using regex models and vice versa
-version: 0.1.0+dev0
+version: 0.0.1+dev1
 homepage: https://moti.monster
 repository: https://github.com/FMotalleb/string_formatter_kit
 
