@@ -3,22 +3,37 @@ abstract class RegExRoot {
   final String? groupName;
   String get token;
   String fillerPlaceHolder;
+  final bool multiLine;
+  final bool caseSensitive;
+  final bool unicode;
+  final bool dotAll;
   String get regexString => then != null ? (token + then!.regexString) : token;
   RegExp get regex => RegExp(
         regexString,
+        multiLine: multiLine,
+        caseSensitive: caseSensitive,
+        unicode: unicode,
+        dotAll: dotAll,
       );
   String fillWith(
     Map<String, String> source, {
     String? emptyFiller,
   }) {
-    final value = source[groupName ?? token] ?? emptyFiller ?? fillerPlaceHolder;
-    return then != null ? (value + then!.fillWith(source, emptyFiller: emptyFiller)) : value;
+    final value = //
+        source[groupName ?? token] ?? emptyFiller ?? fillerPlaceHolder;
+    return then != null //
+        ? (value + then!.fillWith(source, emptyFiller: emptyFiller))
+        : value;
   }
 
   RegExRoot({
     this.then,
     this.groupName,
     required this.fillerPlaceHolder,
+    this.multiLine = false,
+    this.caseSensitive = true,
+    this.unicode = false,
+    this.dotAll = false,
   });
 }
 
@@ -46,7 +61,9 @@ class SimpleWrapper extends RegExRoot {
     String? emptyFiller,
   }) {
     final value = inner.fillWith(source);
-    return then != null ? (value + then!.fillWith(source, emptyFiller: emptyFiller)) : value;
+    return then != null //
+        ? (value + then!.fillWith(source, emptyFiller: emptyFiller))
+        : value;
   }
 
   @override
