@@ -41,8 +41,15 @@ class SimpleMatcher extends RegExRoot {
   @override
   final String token;
 
-  SimpleMatcher({required this.token, super.then, String? fillerPlaceHolder})
-      : super(
+  SimpleMatcher({
+    required this.token,
+    super.then,
+    String? fillerPlaceHolder,
+    super.multiLine,
+    super.caseSensitive,
+    super.unicode,
+    super.dotAll,
+  }) : super(
           fillerPlaceHolder: fillerPlaceHolder ?? token,
         );
 }
@@ -54,6 +61,10 @@ class SimpleWrapper extends RegExRoot {
     super.groupName,
     super.fillerPlaceHolder = '',
     super.then,
+    super.multiLine,
+    super.caseSensitive,
+    super.unicode,
+    super.dotAll,
   });
   @override
   String fillWith(
@@ -80,6 +91,10 @@ class GroupMatcher extends RegExRoot {
     required String groupName,
     String? fillerPlaceHolder,
     super.then,
+    super.multiLine,
+    super.caseSensitive,
+    super.unicode,
+    super.dotAll,
   })  : token = '(?<$groupName>$token)',
         super(
           groupName: groupName,
